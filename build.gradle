@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        maven {
+            url 'http://af.hikvision.com.cn:80/artifactory/maven-down/'
+        }
+
+        maven {
+            url 'http://af.hikvision.com.cn:80/artifactory/trans-release'
+            credentials {
+                username 'trans '
+                password 'trans '
+            }
+        }
+        maven {
+            url 'http://af.hikvision.com.cn:80/artifactory/trans-snapshot'
+            credentials {
+                username 'trans '
+                password 'trans '
+            }
+        }
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.1"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'http://af.hikvision.com.cn:80/artifactory/maven-down/'
+        }
+
+        maven {
+            url 'http://af.hikvision.com.cn:80/artifactory/trans-release'
+            credentials {
+                username 'trans '
+                password 'trans '
+            }
+        }
+        maven {
+            url 'http://af.hikvision.com.cn:80/artifactory/trans-snapshot'
+            credentials {
+                username 'trans '
+                password 'trans '
+            }
+        }
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Display Window Demo</string>
+    <string name="countdown_time">距离xxx还有%1$d天</string>
+</resources>
